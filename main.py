@@ -1,7 +1,9 @@
-def extremes(number):
+def get_extremes(number):
     sorted_ = sorted(number)
+
     asc = ''.join(sorted_[::-1])
     des = ''.join(sorted_)
+
     return(asc, des)
 
 
@@ -13,16 +15,21 @@ def fill(number, side = 'left'):
 
     return(full_number)
 
+
 def kaprekar_routine(number):
     
     steps = 0
 
     if number != 6174:
         str_number = str(number)
-        full_str_number = fill(str_number) if len(str_number)<4 else str_number
-    else:
-        return(steps)
 
+        full_str_number = fill(str_number) if len(str_number) < 4 else str_number
+
+        asc, desc = get_extremes(full_str_number)
+        
+        subtraction = ...
+
+    return(steps)
 
 def run():
     ...
